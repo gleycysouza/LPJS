@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia(numero){
+        var numeropensado = Math.round(Math.random() * numero);
+        console.log(numeropensado);
+        return numeropensado
+    }
+
+    var chute = parseInt(prompt("Qual seu chute?"));
+    //var numerosorteado = sorteia(parseInt(prompt("Qual o numero para multiplicação.")));
+    var numerosorteado = sorteia(30);
+
+    if(chute == numerosorteado){
+        mostra("Você acertou! O número do sistema é: "  + numerosorteado);
+    }else{
+        mostra("Você errou! O número do sistema é: " + numerosorteado);
+    }
+
+</script>
